@@ -11,6 +11,7 @@ ax2 = fig.add_axes([0.35, 0.55, 0.25, 0.25])
 ax3 = fig.add_axes([0.65, 0.55, 0.25, 0.25])
 ax4 = fig.add_axes([0.05, 0.1, 0.25, 0.25])
 ax5 = fig.add_axes([0.35, 0.1, 0.25, 0.25])
+ax6 = fig.add_axes([0.65, 0.1, 0.25, 0.25])
 
 #Plot
 ax1.plot(vector[0], color ='r')
@@ -30,6 +31,11 @@ ax4.hist(vector[3], bins=30, alpha=0.5, color='orange', edgecolor='black')
 labels = 'Valor 1', 'Valor 2', 'Valor 3', 'Valor 4'
 colors = 'orange', 'red', 'pink', 'green'
 ax5.pie(vector[4][0:4], labels = labels, colors = colors, autopct='%1.1f%%')
+
+#Plot 2
+m = vector[5]
+y= 2 * m**2 - 3 * m + 1 
+ax6.plot(y, color = 'purple')
 
 plt.show()
 
